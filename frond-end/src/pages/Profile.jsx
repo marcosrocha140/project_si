@@ -1,11 +1,13 @@
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { FaCheckCircle } from "react-icons/fa";
 import { AiFillBook } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
+import { useState } from "react";
 
 
 const Profile = () =>{
-
+    const [player, setPlayer] = useState(false);
 
     return(
         <div className="profile_container">
@@ -14,28 +16,30 @@ const Profile = () =>{
             
             <div className="profile_UserInfor">
                 <div>
-                    <img className="profile_photo" src="" alt="Foto perfil" />
-                    <p>Goleiro</p>
+                    <img className="profile_photo" src="https://www.dropbox.com/scl/fi/t0a9tkxeoygzt6niv1scv/zen-oh.png?rlkey=m87781qzudisnqux18s689ffo&st=xephmd9g&dl=1" alt="Foto perfil" />
+                    {/* <p>Goleiro</p> */}
                 </div>
 
                 <div className="profile_UserInfor2">
-                    <h1>Marcos Rocha</h1>
+                    <h1>Marcos Rocha <FaCheckCircle style={{color:'gray', fontSize:'16px'}}/></h1>
                     <p><MdOutlineEmail/> rmarcos140@gmail.com</p>
                     <span><IoLocationOutline/> Quixadá, CE</span>
-                    <p>Idade: 22</p>
+                    <p>Idade: 29</p>
                     <a href="#">Editar dados pessoais <FiEdit/></a>
                 </div>
                     
             </div>
             
 
-            <div className="profile_feat_team">
-                <h1>Participação no Clube</h1>
-                <div style={{display:'flex', alignItems:'center', margin:'10px 0'}}>
-                    <img style={{width:'40px'}} src="https://www.dropbox.com/scl/fi/2gsh8w5u8gmetx8tchrsl/milan.png?rlkey=tge6nchg2s3lleyf8ag9fc38b&st=ltmsz3nm&dl=1" alt="Clube" />
-                    <p style={{textTransform:'uppercase', fontSize:'25px'}}>Milan da várzea F.C</p>
-                </div>
-                <div style={{display:'flex', gap:'20px'}}>
+            {
+                player ? (
+                    <div className="profile_feat_team">
+                        <h1>Participação no Clube</h1>
+                        <div style={{display:'flex', alignItems:'center', margin:'10px 0'}}>
+                            <img style={{width:'40px'}} src="https://www.dropbox.com/scl/fi/2gsh8w5u8gmetx8tchrsl/milan.png?rlkey=tge6nchg2s3lleyf8ag9fc38b&st=ltmsz3nm&dl=1" alt="Clube" />
+                            <p style={{textTransform:'uppercase', fontSize:'25px'}}>Milan da várzea F.C</p>
+                        </div>
+                    <div style={{display:'flex', gap:'20px'}}>
                     <div>
                         <p>Função: <span style={{color: '#02f70c'}}>Goleiro</span></p>
                         <p>N° da Camisa: <span style={{color: '#02f70c'}}>1</span></p>
@@ -49,6 +53,8 @@ const Profile = () =>{
                     </div>
                 </div>
             </div>
+                ) : <h1>Não participa de nenhum clube</h1>
+            }
 
             <div className="profile_historic_container">
                 <h1>Histórico de Jogos</h1>

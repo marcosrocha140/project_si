@@ -9,7 +9,10 @@ const responseTeams = await axios.get(`${URL}/teams`);
 
 const responseUsers = await axios.get(`${URL}/users`);
 
+const responseMatches = await axios.get(`${URL}/matches`);
+
 
 export const newsArray = responseNews.data;
 export const teamsArray = responseTeams.data;
 export const usersArray = responseUsers.data;
+export const matchesArray = responseMatches.data;

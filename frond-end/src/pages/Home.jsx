@@ -1,3 +1,6 @@
+import { FaBasketball } from "react-icons/fa6";
+import { IoFootball } from "react-icons/io5";
+
 import Card_matchesTop from "../components/Card_matchesTop"
 import Card_news from "../components/Card_News"
 import { newsArray } from "../assets/news"
@@ -14,8 +17,14 @@ const Home = () =>{
                             <Card_news key={newsItem._id}
                             image={newsItem.image} 
                             title={newsItem.title} 
-                            description={newsItem.description}
                             autor={newsItem.autor}
+                            category={newsItem.category}
+                            icon={
+                                newsItem.category === "Basquete" ? (
+                                    <FaBasketball/>
+                                ) : <IoFootball/>
+                            }
+                            description={newsItem.description}
                             likes={newsItem.like}/>
                         ))
                     }

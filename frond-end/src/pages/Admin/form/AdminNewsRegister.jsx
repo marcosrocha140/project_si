@@ -1,7 +1,10 @@
 import { IoClose } from "react-icons/io5";
-
+import { useState } from "react";
 
 const AdminNewsRegister = ({removeForm}) => {
+
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState();
 
     return (
         <div className="modal">
@@ -17,7 +20,7 @@ const AdminNewsRegister = ({removeForm}) => {
                     
                     <div style={{display:'flex', flexDirection:'column'}}>
                         <label>Título</label>
-                        <input className="modal-content-input" type="text" name="titulo" required />
+                        <input className="modal-content-input" type="text" name="titulo" onChange={(e) => setName(e.target.value)} required />
                     </div>
 
                     <div style={{display:'flex', flexDirection:'column'}}>

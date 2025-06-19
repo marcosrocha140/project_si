@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
-import { ImExit } from "react-icons/im";
 import { HiHome } from "react-icons/hi";
-import { FaShieldHalved } from "react-icons/fa6";
+import { FaShieldHalved, FaArrowRightLong } from "react-icons/fa6";
 import { PiSoccerBallFill } from "react-icons/pi";
 import { GiTrophy, GiExitDoor } from "react-icons/gi";
 import { RiAdminFill } from "react-icons/ri";
+import { FaCircle } from "react-icons/fa";
 
 const Sidebar_navigation = () =>{
-    const [isLogged, setIsLogeed] = useState(true);
+    const [isLogged, setIsLogeed] = useState(false);
 
     function Leave(){
       setIsLogeed(false);
@@ -16,11 +16,11 @@ const Sidebar_navigation = () =>{
 
     return(
         <nav className="sidebar_navigation">
-          <Link to='/' style={{textDecoration:'none'}}><p><HiHome className="icon"/> Home</p></Link>
-          <Link to='/teams' style={{textDecoration:'none'}}><p><FaShieldHalved className="icon"/> Clubes</p></Link>
-          <Link to='/matches' style={{textDecoration:'none'}}><p><PiSoccerBallFill className="icon"/> Jogos</p></Link>
-          <Link to='/tournaments' style={{textDecoration:'none'}}><p><GiTrophy className="icon"/> Torneios</p></Link>
-          <Link to='pageadmin' style={{textDecoration:'none'}}><p><RiAdminFill/> Page Admin</p></Link>
+          <Link to='/' style={{textDecoration:'none'}}><div className="sidebar_navigation_link"><HiHome className="icon"/><p>Home</p></div></Link>
+          <Link to='/matches' style={{textDecoration:'none'}}><div className="sidebar_navigation_link"><PiSoccerBallFill className="icon"/><p> Jogos</p></div></Link>
+          <Link to='/teams' style={{textDecoration:'none'}}><div className="sidebar_navigation_link"><FaShieldHalved className="icon"/><p> Clubes</p></div></Link>
+          <Link to='/tournaments' style={{textDecoration:'none'}}><div className="sidebar_navigation_link"><GiTrophy className="icon"/><p> Torneios</p></div></Link>
+          <Link to='pageadmin' style={{textDecoration:'none'}}><div className="sidebar_navigation_pageAdmin_link"><RiAdminFill/><p> Pagina Admin</p></div></Link>
           {/* O Link abaixo está apenas visivel para telas maiores */}
           
               {
@@ -28,19 +28,25 @@ const Sidebar_navigation = () =>{
                   <> 
                   <Link to='/profile' style={{textDecoration:'none'}}>
                     <div className="sidebar_navigation_profile">
-                      <img src="https://www.dropbox.com/scl/fi/fvoygbo1c0i8d8ydr7ysq/Foto.png?rlkey=1boot4g5qoybflqzm3fm85i3j&st=4vmemkw7&dl=1" alt="Foto perfil" />
-                        <h4 style={{fontFamily:'Black', color:'white'}}>Marcos Rocha</h4>
+                      <img src="https://www.dropbox.com/scl/fi/t0a9tkxeoygzt6niv1scv/zen-oh.png?rlkey=m87781qzudisnqux18s689ffo&st=xephmd9g&dl=1" alt="Foto perfil" />
+                        <div>
+                          <h4 style={{color:'white'}}>Marcos Rocha</h4>
+                          <div style={{color:'#04ff04', display:'flex', fontSize:'11px', gap:'4px', alignItems:'center'}}>
+                            <FaCircle/>
+                            <p style={{fontSize:'15px'}}> Online</p>
+                          </div>
+                        </div>
                     </div>
                   </Link>
-
                   <div className="sidebar_navigation_leave">
-                    <GiExitDoor/>
-                    <span onClick={Leave}>Sair</span>
+                      <FaArrowRightLong/>
+                      <span onClick={Leave}>Sign out</span>
                   </div>
+                  
                   </>
-                ) : <Link to='login' style={{textDecoration:'none'}}><h4 className="sidebar_navigation_btn">Entrar/Casdatrar</h4></Link>
+                ) : <Link to='login' style={{textDecoration:'none'}}><h4 className="sidebar_navigation_btn">Entrar/Cadastrar</h4></Link>
               }
-          
+             
         </nav>
     )
 }

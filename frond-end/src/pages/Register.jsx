@@ -2,14 +2,15 @@ import Input from "../components/Form/Input"
 import {Link} from 'react-router-dom'
 import { useState } from "react"
 import axios from 'axios'
+import {usersArray} from '../assets/users'
 
 
 const Register = () =>{
-
+    const [msgErro, setMsgErro] = useState("");
     const [name, setName] = useState("");
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [rg, setRg] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [rg, setRg] = useState("");
 
 
     const cadstrarUser = async (e) =>{
@@ -18,6 +19,24 @@ const Register = () =>{
         setEmail(email)
         setPassword(password)
         setRg(rg)
+
+        if(!name || !email || !password || !rg){
+            setMsgErro("Preencha Todos os Campos!");
+            return;
+        }
+
+        if(password.length< 8){
+            setMsgErro("Senha deve ter no minimo 8 caracteres!");
+            return;
+        }
+
+        
+        const emailUsed = usersArray.some((user) => email === user.email);
+        if(emailUsed){
+            setMsgErro("E-mail já em uso!");
+            return;
+        }
+     
 
         try {
             const responseUser = await axios.post("http://localhost:4000/users", {
@@ -60,6 +79,11 @@ const Register = () =>{
 
                     <p>Já possui cadastro? <Link to='/login'>Login</Link></p>
                 </form>
+                {msgErro && (
+                <p style={{ color: "red", fontSize: "17px", marginBottom: "10px" }}>
+                {msgErro}
+                </p>
+                )}
             </div>
         </div>
     )
