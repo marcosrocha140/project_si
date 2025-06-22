@@ -376,7 +376,7 @@
 /* Sidebar */
 .sidebar_main{
   background-color: #0F2C1A;
-  border-right: 2px solid rgba(0, 190, 248, 0.863);
+  border-right: 2px solid rgba(0, 190, 248, 0.171);
   position: fixed;
   height: 100%;
   display: flex;
@@ -420,9 +420,10 @@
   padding: 3px 5px;
   width: 220px;
   background-color: #054720;
+  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.3);
   color: rgb(248, 247, 247);
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0.356);
+  border: 1px solid rgba(0, 0, 0, 0.445);
   border-radius: 5px;
 }
 
@@ -465,8 +466,10 @@
 .sidebar_navigation_btn{
   color: #0F2C1A;
   background-color: #81FFBE;
+  box-shadow: inset 10px 10px 15px rgba(29, 28, 28, 0.575);
   padding: 5px 25px;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.418);
   margin: 20px 10px;
 }
 
@@ -1135,6 +1138,7 @@ table {
   padding: 3px 5px;
   width: 100%;
   background-color: transparent;
+  box-shadow: none;
   color: green;
   text-decoration: none;
   border: none;
