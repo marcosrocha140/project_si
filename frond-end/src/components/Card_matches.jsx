@@ -1,14 +1,30 @@
 import { FaLocationDot, FaMapLocationDot } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
 import { MdTimer } from "react-icons/md";
+import { AiTwotoneSchedule } from "react-icons/ai";
+import { IoAlertCircle } from "react-icons/io5";
 
 
-const Card_matches = ({type, backgroundImage, teamHome, teamAway, imageHome, imageAway, city, location, date, textHours}) =>{
+const Card_matches = ({finished, backgroundImage, teamHome, scoreboard, scoreboard2, teamAway, imageHome, imageAway, city, location, date, textHours}) =>{
     return(
         <div>
             <div className="card_matches" style={{backgroundImage:`url(${backgroundImage})`}}>
-                <p className="card_matches_type">{type}</p>
-            
+                <p className="card_matches_type">Amistoso</p>
+
+                {
+                    finished ? (
+                        <div style={{display:'flex', alignItems:'center', gap:'2px'}}>
+                            <IoAlertCircle  style={{fontSize:'20px', color:'#ff0000b5'}}/>
+                            <strong><p>Encerrado</p></strong>
+                        </div>            
+                    ): <div style={{display:'flex', alignItems:'center', gap:'2px'}}>
+                            <AiTwotoneSchedule style={{fontSize:'30px', color:'green'}}/>
+                            <strong><p>Marcado</p></strong>
+                        </div>
+                }
+
+                
+
                 <div className="card_matches_confront">
                     <div className="card_matches_club">
                         <img src={imageHome} alt="clube1" style={{left:'18px'}} className="card_matches_image" title="Cipó dos Miguéis F.C" />
@@ -16,9 +32,9 @@ const Card_matches = ({type, backgroundImage, teamHome, teamAway, imageHome, ima
                     </div>
 
                     <div style={{display: 'flex', alignItems:'center', gap:'20px'}}>
-                        <h4>0</h4>
+                        <h4>{scoreboard}</h4>
                         <h1>VS</h1>
-                        <h4>0</h4>
+                        <h4>{scoreboard2}</h4>
                     </div>
 
                     <div className="card_matches_club2">

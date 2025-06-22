@@ -16,6 +16,12 @@
 }
 
 @font-face {
+  font-family: 'norwester';
+  src: url(./fonts/norwester.otf);
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Cyber';
   src: url(./fonts/Cyber.ttf);
   font-style: normal;
@@ -91,14 +97,51 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.teams_banner{
+  background-image: url(./images/banner3.png);
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
+  width: 100%;
+}
+
+.matches_tbn{
+  display: inline;
+  font-size: 1.4em;
+  padding: 5px 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1d82a7;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.658);
+}
+
+.teams_title{
+  font-family: 'norwester';
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(22, 22, 22, 0.377);
 }
 
 .teams_search_container{
   justify-content: center;
+  gap: 10px;
 }
-.teams_filter{
-  font-size: 14px;
-  border-radius: 4px;
+
+.custom_select{
+  min-width: 20px;
+}
+
+.custom_select select {
+  width: 100%;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
 }
 
 .teams_container{
@@ -224,16 +267,6 @@
   gap: 2px;
 }
 
-.matches_tbn{
-  margin: 10px 0;
-  display: inline;
-  font-size: 1.4em;
-  border-radius: 8px;
-  padding: 5px 10px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #1d82a7;;
-}
 
 .matches_tbn:hover{
   color: #144e03;
@@ -253,7 +286,6 @@
 /* Big Layout */
 
 .team{
-  font-family: 'Roboto';
   color: white;
   background-color: #02443091;
   border: 1px solid white;
@@ -286,6 +318,7 @@
 }
 
 .team_title{
+  font-family: 'norwester';
   font-size: 25px;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.753);
@@ -427,6 +460,11 @@
   border-radius: 5px;
 }
 
+.sidebar_navigation_link:hover{
+  color: #026317;
+  background-color: #02f7ae9a;
+}
+
   .sidebar_navigation_pageAdmin_link{
   display: flex;
   align-items: center;
@@ -438,11 +476,6 @@
   text-decoration: none;
   border: none;
   }
-
-.sidebar_navigation p:hover{
-  background-color: rgb(11, 112, 245);
-  padding-left: 40px;
-}
 
 .icon_exit{
   display: none;
@@ -677,7 +710,7 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   margin-left: 320px;
-  width: 100svh;
+  width: 100%;
   place-items: center;
 }
 
@@ -1409,6 +1442,15 @@ table {
   width: 100%;
   margin-top: 130px;
   margin-left: 0;
+}
+
+.teams_banner{
+  background-image: url(./images/banner2.png);
+  background-position: center;
+  background-size: cover;
+  height: 80px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
+  width: 100%;
 }
 
 .teams_container{

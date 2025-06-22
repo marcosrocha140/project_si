@@ -1,10 +1,9 @@
-import backgroundImage2 from '../images/futebol.jpg'
-import backgroundImage from '../images/banner_basquete.png'
-
 import Card_matches from '../components/Card_matches'
 import CategorySport from '../components/CategorySport'
+import banner from '../images/banner4.png'
 import { useState } from 'react'
 import { matchesArray } from '../../api/api'
+import Banner_Page from '../components/Banner_Pages'
 
 const Matches = () =>{
 
@@ -23,6 +22,7 @@ const Matches = () =>{
 
     return(
         <div className='matches'>
+            <Banner_Page banner={banner}/>
             <h1 style={{backgroundColor:'white'}}>Calendário de <span className='matches_title'>Jogos</span></h1>
             <p style={{color:'white', margin:'2px 0'}}>Confira todos os jogos marcados</p>
 

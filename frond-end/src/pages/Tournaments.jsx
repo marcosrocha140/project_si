@@ -1,9 +1,12 @@
+import Banner_Page from "../components/Banner_Pages";
 import Card_tournaments from "../components/Card_tournaments"
+import banner from '../images/banner5.png'
 
 const Tournaments = () => {
     let count = 0;
     return (
         <div className="tournaments_container">
+            <Banner_Page banner={banner}/>
             <h1>Torneios Esportivos</h1>
             <p style={{fontSize:'14px'}}>Confira os principais torneios organizados na região</p>
             {/* <input className="tournament_search" type="text" placeholder="Buscar por nome do torneio..."/> */}

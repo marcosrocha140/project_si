@@ -22,25 +22,6 @@ const CategorySport = ({selectedCategory, categoria}) =>{
                     </div>
                 ))
             }
-            {/* <div onClick={selectedCategory}>
-                <p>Futebol</p>
-                <IoMdFootball/>
-            </div>
-
-            <div>
-                <p>Futsal</p>
-                <IoMdFootball/>
-            </div>
-
-            <div>
-                <p>Volei</p>
-                <FaVolleyballBall/>
-            </div>
-
-            <div>
-                <p>Basquete</p>
-                <IoIosBasketball/>
-            </div> */}
 
             <div style={{opacity:'30%'}}>
                 <p>Basebol</p>
