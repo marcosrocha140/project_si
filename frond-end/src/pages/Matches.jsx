@@ -8,6 +8,7 @@ import Banner_Page from '../components/Banner_Pages'
 const Matches = () =>{
 
     const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos");
+        const isLogged = true;
     
         const categorias = ["Todos", ...new Set(matchesArray.map(matches => matches.category))];
 
