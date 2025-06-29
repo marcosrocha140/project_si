@@ -33,12 +33,25 @@ app.get("/news", async (req, res) => {
     }
 });
 
+app.get("/tournaments", async (req, res) => {
+    try {
+        const news = await db.collection("tournaments")
+            .find()
+            .sort({ _id: -1 }) // ordena do mais recente para o mais antigo
+            .toArray();
+
+        res.send(news);
+    } catch (error) {
+        res.status(500).send({ error: "Erro ao buscar Torneios", details: error });
+    }
+});
+
 
 app.get("/matches", async (req, res) => {
     try {
         const matches = await db.collection("matches")
             .find()
-            .sort({ _id: -1 }) // ordena do mais recente para o mais antigo
+            // .sort({ _id: -1 }) // ordena do mais recente para o mais antigo
             .toArray();
 
         res.send(matches);
@@ -60,7 +73,22 @@ app.post("/login", async(req, res) => {
 
     try {
         
-        const user = await db.collection("users").findOne({email});
+        const userAgg = await db.collection("users").aggregate([
+        { $match: { email } },
+        {
+            $lookup: {
+                from: 'teams',
+                localField: 'clubeId',
+                foreignField: '_id',
+                as: 'clube'
+            }
+        },
+
+        { $unwind: { path: '$clube', preserveNullAndEmptyArrays: true } }
+        ]).toArray();
+
+        const user = userAgg[0]; // pega o único usuário retornado
+
 
         if(!user){
             return res.status(401).send({erro: "Usuário não encontrado!"});
@@ -84,8 +112,16 @@ app.post("/login", async(req, res) => {
             user: {
                 name: user.name,
                 email: user.email,
+                city: user.city,
                 admin: user.admin,
-                image: user.image || null
+                jogador: user.jogador,
+                image: user.image || null,
+                clubeId: user.clubeId,
+                clube: {
+                    name: user.clube?.name || null,
+                    image: user.clube?.image || null
+                }
+                
             }
         });
 

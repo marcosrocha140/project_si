@@ -1,18 +1,20 @@
-import { FcLike } from "react-icons/fc";
+import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { MdOutlineMessage } from "react-icons/md";
 import { FaShare } from "react-icons/fa";
 
-const Emotions = ({likes}) => {
+const Emotions = ({likes, liked, msgClick}) => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", textAlign:'center' }}>
+    <div className="emotions">
       <p>
-        <FcLike/>
+        {
+          liked ? <FcLike onClick={liked}/> : <FcLikePlaceholder onClick={liked}/>
+        }
         <span>
           {likes} curtidas
         </span>
       </p>
 
-      <p>
+      <p onClick={msgClick}>
         <MdOutlineMessage />
         Comentar
         {/* <span style={{color:'black'}}>Ainda não há comentários!</span> */}

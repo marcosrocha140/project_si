@@ -18,10 +18,10 @@ const Team = () =>{
     return(
         <div className="team">
 
-            {/* <div style={{backgroundImage:`url(${team.banner})`}}  >
+            <div style={{backgroundImage:`url(${team.banner})`}} className="team_banner" >
 
-            </div> */}
-            <img src={team.banner} alt={`Foto clube ${team.name}`} className="team_banner"/>
+            </div>
+            {/* <img src={team.banner} alt={`Foto clube ${team.name}`} className="team_banner"/> */}
 
             <div className="team_img">
                 <div style={{display:'flex', alignItems:'center'}}>

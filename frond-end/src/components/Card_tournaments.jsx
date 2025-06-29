@@ -4,7 +4,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 
-const Card_tournaments = ({banner, title, subscribe, category, city, date, teams}) => {
+const Card_tournaments = ({banner, title, finished, category, city, date, teams}) => {
     return(
         <div className='tournament'>
             <div style={{backgroundImage:`url(${banner})`}} className="tournaments_banner">
@@ -17,14 +17,14 @@ const Card_tournaments = ({banner, title, subscribe, category, city, date, teams
             </div>
                 
                 <div style={{textAlign:'left', padding:'5px 7px', display:'flex', flexDirection:'column'}}>
-                    <p style={{color:'#999999'}}><IoFootball/> {category}</p>
+                    <p style={{color:'#999999'}}><IoFootball/>Categoria: {category}</p>
                     <p style={{color:'#d79153'}}><FaMapLocationDot/> <strong>Local:</strong> {city}</p>
                     <p style={{color:'#41c38e'}}><BsCalendar2Date/> <strong>Início:</strong> {date}</p>
-                    <p style={{color:'#a550b3'}}><IoPerson/> {teams}</p>
+                    <p style={{color:'#a550b3'}}><IoPerson/>Paticipantes: {teams}</p>
                     <span style={{fontSize:'8px', color:'gray'}}>Tubaroas da V.D.O e outras 3 equipes conhecidas irão participar</span>
                     <Link to="infor_tournament"><p>Mais detalhes</p></Link>
                 </div>
-                <p className="tournament_subscribe"><strong>{subscribe}</strong></p>
+                <p className="tournament_subscribe"><strong>{ finished ? finished = "Encerrado" : finished = "Aberto"}</strong></p>
         </div>
     )
 }

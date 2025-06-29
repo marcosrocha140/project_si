@@ -5,10 +5,10 @@ function Sidebar() {
     return (
       <div className='sidebar_main'>
         <div className="sidebar">
-        <div className='sidebar_top'>
-            <img className="sidebar_logo" src={logoSport} alt="Logo App" />
-            <h2 className="sidebar_title">Sport Interior</h2>
-        </div>
+          <div className='sidebar_top'>
+              <img className="sidebar_logo" src={logoSport} alt="Logo App" />
+              <h2 className="sidebar_title">Sport Interior</h2>
+          </div>
         
       </div>
       <Sidebar_navigation/>

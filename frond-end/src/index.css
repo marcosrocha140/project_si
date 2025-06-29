@@ -84,6 +84,46 @@
 
 .home_page{
   padding-left: 320px;
+  width: 100%;
+}
+
+.game_page_top{
+  font-family: 'Roboto';
+  display: flex;
+  height: 90px;
+  width: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game_page_top_user{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.game_page_top h1{
+  color: #08a8a8;
+}
+
+.game_page_top_image{
+  display: flex;
+  flex-direction: column;
+}
+
+.game_page_top_image:hover{
+  opacity: 30%;
+}
+
+.game_page_top_exit{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: #ff07078f;
+}
+
+.game_page_top_exit:hover{
+  color: greenyellow;
 }
 
 .lastMatches{
@@ -93,7 +133,7 @@
 /* Page Teams */
 
 .teams{
-  margin-left: 320px;
+  margin-left: 260px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -148,6 +188,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  padding: 10px 20px;
 }
 
 .content {
@@ -168,13 +209,19 @@
 }
 
 .news {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.849);
   text-align: left;
-  background: white;
+  background: transparent;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  min-width: 420px;
   max-width: 780px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.253);
 }
 
 .news h2{
@@ -186,9 +233,11 @@
   font-family: 'Roboto';
 }
 
-.news img {
+.news_image {
   width: 100%;
   border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.507);
+  box-shadow: 2px 2px 2px #00000060;
 }
 
 .match-card:hover {
@@ -233,11 +282,18 @@
 /* Big Layout */
 
 .matches{
-  margin-left: 320px;
+  margin-left: 260px;
   width: 100%;
 }
 
 .matches_title{
+  color: rgb(199, 66, 66);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
+  background-color: wheat;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.658);
+}
+
+.matches_title_games{
   font-family: 'Distopia';
   color: white;
   background-color: #026317;
@@ -249,7 +305,7 @@
   font-family: 'Roboto';
   flex-direction: row;
   width: 100%;
-  color: rgb(243, 198, 0);
+  color: #f5e8ce;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -279,6 +335,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  padding: 10px 20px;
 }
 
 
@@ -299,8 +356,9 @@
 
 .team_banner{
   background-size: cover;
+  background-position: top;
   height: 420px;
-  width: 100svh;
+  width: 100vh;
 }
 
 .team_img{
@@ -409,7 +467,6 @@
 /* Sidebar */
 .sidebar_main{
   background-color: #0F2C1A;
-  border-right: 2px solid rgba(0, 190, 248, 0.171);
   position: fixed;
   height: 100%;
   display: flex;
@@ -440,6 +497,7 @@
 }
 
 .sidebar_navigation{
+  font-family: 'Roboto';
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
@@ -468,13 +526,21 @@
   .sidebar_navigation_pageAdmin_link{
   display: flex;
   align-items: center;
-  margin-top: 0;
+  margin-top: 10px;
   padding: 3px 5px;
   width: 100%;
-  background-color: transparent;
-  color: green;
+  color: #014724cc;
+  background-color: #00ccff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
+  box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.664);
   text-decoration: none;
-  border: none;
+  border-radius: 8px;
+  border: 1px solid rgba(250, 10, 250, 0.39);
+  }
+
+  .sidebar_navigation_pageAdmin_link:hover{
+    color: wheat;
+    background-color: green;
   }
 
 .icon_exit{
@@ -497,13 +563,18 @@
 }
 
 .sidebar_navigation_btn{
-  color: #0F2C1A;
-  background-color: #81FFBE;
+  color: #ffffff;
   box-shadow: inset 10px 10px 15px rgba(29, 28, 28, 0.575);
   padding: 5px 25px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.418);
   margin: 20px 10px;
+}
+
+.sidebar_navigation_btn:hover{
+  color: #0F2C1A;
+  background-color: #81FFBE;
+
 }
 
 .sidebar_navigation_leave{
@@ -567,8 +638,13 @@
   margin-top: 15px;
 }
 
+.login_text input{
+  background-color: rgba(151, 147, 147, 0.164);
+  color: wheat;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+}
+
 .login_input{
-  color: #ffffff;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.644);
   height: 38px;
@@ -709,17 +785,32 @@
   color: #fffcfcf1;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  margin-left: 320px;
+  margin-left: 260px;
   width: 100%;
   place-items: center;
 }
 
+.tournaments_title{
+  font-family: 'norwester';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(199, 66, 66);
+  background-color: wheat;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.658);
+  width: 100%;
+}
+
+.tournaments_title h1{
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.712);
+}
 
 .tournaments_cards{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  width: 100svh;
+  padding: 10px 20px;
+  width: 100%;
 }
 
 .tournaments_banner{
@@ -750,6 +841,23 @@
 
 .Card_News_image{
   width: 100%;
+}
+
+/* Emotions */
+.emotions{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.emotions p{
+  padding: 3px 40px;
+}
+
+.emotions p:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.062);
+  border-radius: 6px;
 }
 
 /* Page User Profile */
@@ -1120,6 +1228,13 @@ table {
   text-decoration: none;
 }
 
+/* Foote mobile */
+  .foote_mobile{
+    display: none;
+  }
+
+
+
 /* ////////////////////////////////////////////////////////////////////// */
 /* Responsivo: sidebar vai pro topo */
 @media (max-width: 768px) {
@@ -1130,6 +1245,11 @@ table {
   .home_page{
   padding-left: 0;
   padding-top: 120px;
+  width: 100%;
+  }
+
+  .game_page_top{
+    display: none;
   }
 
   .sidebar_main{
@@ -1163,6 +1283,22 @@ table {
     justify-content: space-between;
    
   }
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.849);
+  text-align: left;
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  min-width: 320px;
+  max-width: 780px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.253);
+}
 
   .sidebar_navigation .sidebar_navigation_link{
   display: flex;
@@ -1206,11 +1342,11 @@ table {
   display: none;
 }
 
-  .sidebar_navigation p:hover{
+  /* .sidebar_navigation p:hover{
     color: rgb(233, 145, 13);
     background-color: rgb(11, 63, 175);
     padding: 0 9px;
-  }
+  } */
 
 
   /* Page Matches */
@@ -1226,13 +1362,35 @@ table {
     margin-left: 0;
   }
 
+  .matches_category{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: 'Roboto';
+  width: 100%;
+  color: #f5e8ce;
+  justify-content: center;
+  gap: 10px;
+}
+
+.matches_category div{
+  background-color: #ffffff63;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid rgba(2, 255, 150, 0.5);
+  padding: 2px 3px;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
   .matches_tbn{
   padding: 2px 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto';
   text-align: center;
   color: #000000;
   text-shadow: 1px 1px 2px white;
-  background-color: rgba(168, 235, 12, 0.877);
+  background-color: #0cebd0e0;
   }
 
   .lastMatches{
@@ -1319,12 +1477,69 @@ table {
     text-align: left;
   }
   
+  /* Page User Profile */
+  .profile_container{
+    color: white;
+    margin-top: 137px;
+    margin-left: 0;
+    border: 1px solid white;
+    padding: 3px 3px;
+    border-radius: 8px;
+  }
+
+  .profile_historic_container{
+  text-align: left;
+  font-family: 'Roboto';
+  margin-top: 30px;
+  }
+
+.profile_historic{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  gap: 5px;
+  }
+
+.profile_Userinfor3{
+  text-align: center;
+  display: inline-block;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  padding: 13px 8px;
+  background-color: #02443091;
+  }
+
+  .profile_edit{
+    text-decoration: none;
+    color: #1da782;
+    background-color: #073812;
+    padding: 5px 5px;
+    border: 1px solid rgba(75, 99, 75, 0.425);
+    border-radius: 7px;
+  }
 
 
 /* Card Matches */
 .card_matches{
     max-width: 750px;
   
+  }
+
+
+  /* Foote mobile */
+
+  .foote_mobile{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.815);
+    background-color: #000;
+    height: 40px;
+    width: 100%;
+    padding: 5px 5px;
   }
 
 
@@ -1456,6 +1671,7 @@ table {
 .teams_container{
   display: flex;
   flex-direction: column;
+  padding: 0;
   gap: 0px;
 }
 
@@ -1541,6 +1757,7 @@ table {
 .tournaments_cards{
   display: inline;
   gap: 15px;
+  padding: 10px 20px;
   width: 100%;
 }
 

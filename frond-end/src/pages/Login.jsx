@@ -24,6 +24,7 @@ const Login = () =>{
             localStorage.setItem('user', JSON.stringify(responseUserLogin.data.user));
             navigate("/home");
             alert("Login Realizado com sucesso!");
+            
         } catch (error) {
             setErro("Credenciais Invalidas! Tente Novamente.");
             console.log("Error:", error);

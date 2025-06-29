@@ -16,6 +16,7 @@ import AdminTeams from './pages/Admin/AdminTeams';
 import AdminNews from './pages/Admin/AdminNews';
 import AdminUsers from './pages/Admin/AdminUsers';
 import AdminUsersCard from './pages/Admin/AdminUsersCard';
+import FooterMobile from './components/FooterMobile';
 
 function AppLayout(){
   const location = useLocation();
@@ -46,6 +47,7 @@ function AppLayout(){
           
 
         </Routes>
+        <FooterMobile/>
     </>
   )
 }
