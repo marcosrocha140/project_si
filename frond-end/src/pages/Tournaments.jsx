@@ -12,11 +12,15 @@ const Tournaments = () => {
 
             <Banner_Page banner={banner}/>
 
+<<<<<<< HEAD
             <div className="tournaments_title">
                 <GiTrophyCup style={{fontSize:'2.4em'}}/> 
                 <h1>Torneios Esportivos</h1>
                 <GiSportMedal style={{fontSize:'2.4em'}}/> 
             </div>
+=======
+            <h1 style={{fontSize:'6em'}}>Torneios <span style={{color:'#1cbd07ff'}}>Esportivos</span></h1> 
+>>>>>>> 8c532c4 (updates)
 
             <p style={{fontSize:'14px'}}>Confira os principais torneios organizados na região.</p>
             <CategorySport/>

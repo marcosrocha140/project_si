@@ -15,6 +15,15 @@
 
 }
 
+<<<<<<< HEAD
+=======
+body{
+  background-color: #026317;
+  width: 100%;
+  /* background-image: url(./images/backgroundPage.png); */
+}
+
+>>>>>>> 8c532c4 (updates)
 @font-face {
   font-family: 'norwester';
   src: url(./fonts/norwester.otf);
@@ -83,7 +92,12 @@
 /* Page Home */
 
 .home_page{
+<<<<<<< HEAD
   padding-left: 320px;
+=======
+  margin-top: 90px;
+  align-items: center;
+>>>>>>> 8c532c4 (updates)
   width: 100%;
 }
 
@@ -92,7 +106,10 @@
   display: flex;
   height: 90px;
   width: 100vh;
+<<<<<<< HEAD
   align-items: center;
+=======
+>>>>>>> 8c532c4 (updates)
   justify-content: space-between;
 }
 
@@ -116,16 +133,24 @@
 }
 
 .game_page_top_exit{
+<<<<<<< HEAD
   cursor: pointer;
   display: flex;
   flex-direction: column;
   color: #ff07078f;
+=======
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ff0707c9;
+>>>>>>> 8c532c4 (updates)
 }
 
 .game_page_top_exit:hover{
   color: greenyellow;
 }
 
+<<<<<<< HEAD
 .lastMatches{
 
 }
@@ -137,6 +162,22 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+=======
+.iconVerify{
+  color: rgb(5, 191, 238);
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+}
+
+
+/* Page Teams */
+
+.teams{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+>>>>>>> 8c532c4 (updates)
   width: 100%;
 }
 
@@ -150,12 +191,24 @@
 }
 
 .matches_tbn{
+<<<<<<< HEAD
   display: inline;
   font-size: 1.4em;
   padding: 5px 10px;
   text-align: center;
   color: #ffffff;
   background-color: #1d82a7;
+=======
+  width: 290px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-align: center;
+  color: #4f298b;
+  background-color: #1d82a7;
+  border: none;
+  border-radius: 8px;
+>>>>>>> 8c532c4 (updates)
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.658);
 }
 
@@ -282,9 +335,24 @@
 /* Big Layout */
 
 .matches{
+<<<<<<< HEAD
   margin-left: 260px;
   width: 100%;
 }
+=======
+  margin-top: 90px;
+  width: 100%;
+}
+.text_matches_date{
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1),  /* brilho em azul */
+               0 0 20px rgba(0, 255, 255, 0.7),  /* brilho mais forte */
+               0 0 30px rgba(0, 255, 255, 0.5);  /* brilho suave */
+
+}
+>>>>>>> 8c532c4 (updates)
 
 .matches_title{
   color: rgb(199, 66, 66);
@@ -311,8 +379,13 @@
   gap: 10px;
 }
 
+<<<<<<< HEAD
 .matches_category div{
   background-color: #ffffff63;
+=======
+.matches_category_container{
+  background-color: #ffffff2d;
+>>>>>>> 8c532c4 (updates)
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid rgba(2, 255, 150, 0.5);
@@ -323,6 +396,15 @@
   gap: 2px;
 }
 
+<<<<<<< HEAD
+=======
+.matches_category_container:hover{
+  cursor: pointer;
+  background-color: #00ccff;
+  color: #000;
+}
+
+>>>>>>> 8c532c4 (updates)
 
 .matches_tbn:hover{
   color: #144e03;
@@ -346,8 +428,13 @@
   color: white;
   background-color: #02443091;
   border: 1px solid white;
+<<<<<<< HEAD
   margin-top: 1px;
   margin-left: 320px;
+=======
+  margin-top: 90px;
+  margin: auto;
+>>>>>>> 8c532c4 (updates)
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.308);
@@ -383,8 +470,16 @@
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .team_team{
   text-align: left;
+=======
+.text_coach{
+  background-color: #000000b7;
+}
+
+.team_team{
+>>>>>>> 8c532c4 (updates)
   background-color: #034733;
   border: 1px solid rgba(255, 255, 255, 0.562);
   border-radius: 8px;
@@ -399,15 +494,26 @@
   border: 1px solid rgba(255, 255, 255, 0.562);
   border-radius: 8px;
   padding: 20px 20px;
+<<<<<<< HEAD
   gap: 40px;
 }
 
 .team_team_center img{
+=======
+  gap: 30px;
+}
+
+.team_team_center img{
+  margin: auto;
+>>>>>>> 8c532c4 (updates)
   text-align: center;
   width: 200px;
   border-radius: 9px;
   border: 0.4px solid rgba(245, 245, 245, 0.548);
+<<<<<<< HEAD
   margin-top: 30px;
+=======
+>>>>>>> 8c532c4 (updates)
 }
 
 .team_data{
@@ -423,6 +529,11 @@
 }
 
 .team_data_patro{
+<<<<<<< HEAD
+=======
+  display: flex;
+  flex-direction: column;
+>>>>>>> 8c532c4 (updates)
   font-size: 1.4em;
   margin-top: 10px;
   padding: 5px 50px;
@@ -448,6 +559,11 @@
 }
 
 .team_like{
+<<<<<<< HEAD
+=======
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #041f96;
+>>>>>>> 8c532c4 (updates)
   display: flex;
   padding: 4px 7px;
   align-items: center;
@@ -456,6 +572,47 @@
   margin-right: 7px;
 }
 
+<<<<<<< HEAD
+=======
+.users_search{
+  margin-top: 100px;
+  width: 100%;
+}
+
+.users_search_input{
+  font-size: 22px;
+  padding: 5px 10px;
+  width: 450px;
+  border: none;
+  border-radius: 16px;
+}
+
+.users_search_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.users_search_card{
+  display: flex;
+  margin-top: 10px;
+  background-color: #1664273f;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
+  border-radius: 8px;
+  padding: 7px;
+}
+
+.btn_follow{
+  display: flex;
+  gap: 3px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(6, 92, 253, 0.863);
+  border: none;
+  border-radius: 8px;
+}
+
+>>>>>>> 8c532c4 (updates)
 /* //////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Layout container */
@@ -466,16 +623,30 @@
 
 /* Sidebar */
 .sidebar_main{
+<<<<<<< HEAD
   background-color: #0F2C1A;
   position: fixed;
   height: 100%;
   display: flex;
   flex-direction: column;
+=======
+  background-color: #024430;
+  border-bottom: 1px solid #149708c2;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  padding-right: 19px;
+  z-index: 2;
+>>>>>>> 8c532c4 (updates)
 }
 .sidebar {
   color: white;
   padding: 20px;
+<<<<<<< HEAD
   width: 270px;
+=======
+  width: 330px;
+>>>>>>> 8c532c4 (updates)
   place-items: center;
 }
 
@@ -496,12 +667,62 @@
   width: 60px;
 }
 
+<<<<<<< HEAD
 .sidebar_navigation{
   font-family: 'Roboto';
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
   place-items: center;
+=======
+.sidebar_friend{
+ display: flex; 
+ align-items: center;
+ justify-content: space-between;
+ border: 1px solid rgba(255, 255, 255, 0.178);
+ border-radius: 8px;
+ margin-top: 6px;
+ padding: 2px 2px;
+}
+
+.sidebar_friend:hover{
+  cursor: pointer;
+  background-image: url(https://www.dropbox.com/scl/fi/9xv4fqg80oaa6fnmmsz1u/turbuls-removebg-preview.png?rlkey=wcnsofu8j3u79qh5uqgsg9vrq&st=sp9w9lco&dl=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.friend_name_function{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.friend_name_function p{
+  font-size: 19px;
+  color: wheat;
+}
+
+.friend_name_function span{
+  color: #ffa703f5;
+}
+
+.sidebar_navigation{
+  font-family: 'Roboto';
+  display: flex;
+  width: 100%;
+  place-items: center;
+  justify-content: space-between;
+}
+
+.sidebar_navigation .sidebar_navigation_links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4em;
+>>>>>>> 8c532c4 (updates)
 }
 
 .sidebar_navigation .sidebar_navigation_link{
@@ -509,6 +730,7 @@
   align-items: center;
   margin-top: 2px;
   padding: 3px 5px;
+<<<<<<< HEAD
   width: 220px;
   background-color: #054720;
   box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.3);
@@ -521,21 +743,41 @@
 .sidebar_navigation_link:hover{
   color: #026317;
   background-color: #02f7ae9a;
+=======
+  color: rgb(248, 247, 247);
+  text-decoration: none;
+}
+
+.sidebar_navigation_link:hover{
+  color: #13d5db;
+  border-bottom: 2px solid #13d5db;
+>>>>>>> 8c532c4 (updates)
 }
 
   .sidebar_navigation_pageAdmin_link{
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   margin-top: 10px;
   padding: 3px 5px;
   width: 100%;
   color: #014724cc;
   background-color: #00ccff;
+=======
+  padding: 3px 5px;
+  width: 100%;
+  color: wheat;
+  background-color: #131313;
+>>>>>>> 8c532c4 (updates)
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
   box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.664);
   text-decoration: none;
   border-radius: 8px;
+<<<<<<< HEAD
   border: 1px solid rgba(250, 10, 250, 0.39);
+=======
+  border: 1px solid rgba(10, 214, 250, 0.39);
+>>>>>>> 8c532c4 (updates)
   }
 
   .sidebar_navigation_pageAdmin_link:hover{
@@ -634,8 +876,12 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+<<<<<<< HEAD
   padding-left: 10px;
   margin-top: 15px;
+=======
+  width: 100%;
+>>>>>>> 8c532c4 (updates)
 }
 
 .login_text input{
@@ -655,20 +901,50 @@
 .login_btn{
     font-family: 'Swipe';
     letter-spacing: 2px;
+<<<<<<< HEAD
     text-shadow: 2px 2px 2px #000000fa;
+=======
+    text-shadow: 2px 2px 2px #00000094;
+>>>>>>> 8c532c4 (updates)
     background-color: #06ab5f;
     color: #ffffff;
     border: 2px solid #000000b5;
     font-size: 1.2em;
     border-radius: 4px;
+<<<<<<< HEAD
     padding: 4px 10px;
+=======
+    padding: 4px 6px;
+>>>>>>> 8c532c4 (updates)
     margin: 10px 0px;
 }
 
 .login_btn:hover{
+<<<<<<< HEAD
   cursor: pointer;
   background-color: greenyellow;
   color: rgb(58, 206, 58);
+=======
+  font-family: 'Road_Rage';
+  cursor: pointer;
+  background-color: rgb(47, 241, 255);
+  color: rgb(240, 240, 240);
+}
+
+.msgErro{
+  font-family: 'Roboto';
+  display: flex;
+  width: 100%;
+  color: #000000;
+  background-color: rgba(214, 252, 2, 0.884);
+  border-radius: 6px;
+  font-size: 17px;
+  height: 60px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+>>>>>>> 8c532c4 (updates)
 }
 /* Card_matches tela pc */
 
@@ -785,8 +1061,13 @@
   color: #fffcfcf1;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+<<<<<<< HEAD
   margin-left: 260px;
   width: 100%;
+=======
+  width: 100%;
+  margin-top: 90px;
+>>>>>>> 8c532c4 (updates)
   place-items: center;
 }
 
@@ -866,6 +1147,10 @@
 .profile_container{
   color: white;
   margin-left: 320px;
+<<<<<<< HEAD
+=======
+  margin-top: 100px;
+>>>>>>> 8c532c4 (updates)
   border: 1px solid white;
   padding: 10px 10px;
   border-radius: 8px;
@@ -875,7 +1160,12 @@
   font-family: 'Roboto';
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   align-items: center;
+=======
+  align-items: flex-start;
+  justify-content: space-between;
+>>>>>>> 8c532c4 (updates)
   gap: 10px;
 }
 
@@ -897,6 +1187,21 @@
   font-family: 'Roboto';
 }
 
+<<<<<<< HEAD
+=======
+.link_profile_team{
+  text-decoration: none;
+  border-radius: 8px;
+  color: wheat;
+  padding: 5px 7px;
+  margin-left: 8px;
+}
+
+.link_profile_team:hover{
+  color: #00ccff;
+}
+
+>>>>>>> 8c532c4 (updates)
 table{
   border: 2px solid rgba(255, 255, 255, 0.445);
   border-collapse: collapse;
@@ -925,6 +1230,20 @@ table{
   background-color: #02443091;
 }
 
+<<<<<<< HEAD
+=======
+.UserFollowage{
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 140px;
+  padding: 10px 8px;
+  background-color: #02443091;
+}
+
+>>>>>>> 8c532c4 (updates)
 /* Infors Tournament */
 /* Big Layout */
 .Infor_tournament_container{
@@ -1042,6 +1361,10 @@ table {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: aliceblue;
   background-color: #1e3a8a;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> 8c532c4 (updates)
   border: none;
   border-radius: 5px;
   padding: 5px 5px;
@@ -1210,7 +1533,11 @@ table {
 .adminUsersCard_btn2{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: aliceblue;
+<<<<<<< HEAD
   background-color: #05bb76;
+=======
+  background-color: #09a46e;
+>>>>>>> 8c532c4 (updates)
   border: none;
   border-radius: 5px;
   padding: 5px 5px;

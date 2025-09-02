@@ -5,8 +5,17 @@ import { FaRegUser } from "react-icons/fa";
 import { TbVs } from "react-icons/tb";
 import { LiaTrophySolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 const Navi_bar = () => {
+=======
+import {useAuth} from '../../AuthContext'
+
+
+const Navi_bar = () => {
+  const {user} = useAuth();
+
+>>>>>>> 8c532c4 (updates)
   return (
     <div className="navi_bar_container">
       <img
@@ -45,11 +54,21 @@ const Navi_bar = () => {
           <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
             <img
               style={{ width: "35px", height: "35px", borderRadius: "100%" }}
+<<<<<<< HEAD
               src="https://www.dropbox.com/scl/fi/wa4bgd6uyefh0p22theqy/Captura-de-tela-2025-05-31-164852.png?rlkey=lvvfaku2b2urucvh2cphxa1v5&st=65lvwhjv&dl=1"
               alt="Foto"
             />
             <p>Marcos Rocha</p>
             <IoMdExit />
+=======
+              src={user?.image}
+              alt={`Foto ${user?.name}`}
+            />
+            <p>{user?.name}</p>
+            <Link to='/'>
+              <IoMdExit/>
+            </Link>
+>>>>>>> 8c532c4 (updates)
           </div>
         </div>
       </nav>

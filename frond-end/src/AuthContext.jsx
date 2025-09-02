@@ -19,20 +19,41 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+<<<<<<< HEAD
+=======
+  const login = (userData, token) => {
+    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(userData));
+    setIsLogged(true);
+    setUser(userData);
+  };
+
+>>>>>>> 8c532c4 (updates)
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setIsLogged(false);
     setUser(null);
+<<<<<<< HEAD
     window.location.href = "/login"; // ou useNavigate, se preferir
   };
 
   return (
     <AuthContext.Provider value={{ isLogged, user, logout }}>
+=======
+    window.location.href = "/login"; // ou useNavigate()
+  };
+
+  return (
+    <AuthContext.Provider value={{ isLogged, user, login, logout }}>
+>>>>>>> 8c532c4 (updates)
       {children}
     </AuthContext.Provider>
   );
 };
 
+<<<<<<< HEAD
 // Hook de uso
+=======
+>>>>>>> 8c532c4 (updates)
 export const useAuth = () => useContext(AuthContext);

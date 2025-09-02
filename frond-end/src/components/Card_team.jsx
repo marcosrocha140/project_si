@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom'
 import { FaChevronRight } from "react-icons/fa";
 import { RiWomenLine } from "react-icons/ri";
 import { AiOutlineMan } from "react-icons/ai";
+<<<<<<< HEAD
 import { teamsArray } from '../assets/teams'
 const Card_team = ({_id, image, name, city, gender}) =>{
     return(
         <div className={Styles.team}>
+=======
+const Card_team = ({_id, image, name, city, gender, bgCardTeam}) =>{
+    return(
+        <div className={Styles.team} style={{ backgroundImage: `url(${bgCardTeam})` }}>
+>>>>>>> 8c532c4 (updates)
 
             <div className='team_img_title'>
 

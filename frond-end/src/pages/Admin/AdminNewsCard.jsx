@@ -2,7 +2,11 @@ import { FaRegEdit, FaEyeSlash } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 
+<<<<<<< HEAD
 const AdminNewsCard = ({image, autor, title, description}) => {
+=======
+const AdminNewsCard = ({image, autor, title, description, onEdit}) => {
+>>>>>>> 8c532c4 (updates)
     return(
         <div className="adminnewscard">
             <div>
@@ -22,7 +26,11 @@ const AdminNewsCard = ({image, autor, title, description}) => {
                 <p>{description}</p>
 
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
+<<<<<<< HEAD
                     <button className="table_btnEdit">
+=======
+                    <button className="table_btnEdit" onClick={onEdit}>
+>>>>>>> 8c532c4 (updates)
                         <FaRegEdit /> Editar
                     </button>
 

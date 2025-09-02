@@ -11,6 +11,10 @@ import Register from './pages/Register';
 import Main from './pages/Admin/PageAdmin';
 import Profile from './pages/Profile';
 import Infor_tournament from './pages/Infor_tournament';
+<<<<<<< HEAD
+=======
+import Users_Search from './components/Users_Search';
+>>>>>>> 8c532c4 (updates)
 import PageAdmin from './pages/Admin/PageAdmin';
 import AdminTeams from './pages/Admin/AdminTeams';
 import AdminNews from './pages/Admin/AdminNews';
@@ -32,6 +36,10 @@ function AppLayout(){
           <Route path='/matches' element={<Matches/>}/>
           <Route path='/tournaments' element={<Tournaments/>}/>
           <Route path='/tournaments/infor_tournament' element={<Infor_tournament/>}/>
+<<<<<<< HEAD
+=======
+          <Route path='/users_search' element={<Users_Search/>}/>
+>>>>>>> 8c532c4 (updates)
           <Route path='/team/:id' element={<Team/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>

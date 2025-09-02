@@ -8,6 +8,40 @@ import { IoMdClose, IoIosFootball } from "react-icons/io";
 const AdminUsersCard = () =>{
     return(
         <>
+<<<<<<< HEAD
+=======
+        {/* <div style={{backgroundColor:'#949494ff', width:'530px'}}>
+            <p><strong>Novo Desafio</strong></p>
+            <div style={{display:'flex', justifyContent:'space-between'}}>
+                <div style={{display:'flex', alignItems:'center'}}>
+                    <img style={{width:'90px', height:'90px'}} src="https://www.dropbox.com/scl/fi/880lfusv9hfcll7d6js6b/varzea-removebg-preview.png?rlkey=33bcmge5k56d8qg3p6zgn21io&st=g4lc0h5c&dl=1" alt="" />
+                    <p><strong>Várzea da Onça E.C</strong></p>
+                </div>
+
+                <div style={{display:'flex', alignItems:'center'}}>
+                    <p><strong>União Palestina</strong></p>
+                    <img style={{width:'90px', height:'90px'}} src="https://www.dropbox.com/scl/fi/o4q74d8ubrg8uy1dgbncg/uniao.png?rlkey=064ngno17ieu9puq91fvv2mh4&st=b0bnv309&dl=1" alt="" />
+                </div>
+            </div>
+            <p>Modalidade: Futebol</p>
+            <p>Data: 18 ago 2025</p>
+            <p>Local: Arena Deusimar mendes</p>
+            <p>"Queremos revanche do ultimo jogo"</p>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <button className="table_btnEdit">
+                        <FaCheckSquare /> Aceitar duelo
+                    </button>
+                
+                    <button className="adminUsersCard_btn2">
+                        <IoMdClose /> Recusar
+                    </button>
+                
+                    <button className="table_btnDelete">
+                        Negociar
+                    </button>
+                </div>
+        </div> */}
+>>>>>>> 8c532c4 (updates)
         <div className="admin_header">
             <h2>
                 <LiaClipboardListSolid />

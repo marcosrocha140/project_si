@@ -12,6 +12,13 @@
     margin-top: 5px;
 }
 
+<<<<<<< HEAD
+=======
+.team:hover{
+    background-size: cover;
+}
+
+>>>>>>> 8c532c4 (updates)
 .team p{
     color: rgb(255, 255, 255);
     background-color: #164E63;

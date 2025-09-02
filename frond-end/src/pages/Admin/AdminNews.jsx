@@ -7,15 +7,31 @@ import { newsArray } from "../../assets/news";
 
 const AdminNews = () => {
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
+<<<<<<< HEAD
 
     function formulario(){
         setMostrarFormulario(true);
+=======
+    const [newsEdit, setNewsEdit] = useState(false);
+
+    function formulario(){
+        setMostrarFormulario(true);
+        setNewsEdit(null);
+>>>>>>> 8c532c4 (updates)
     }
 
     function removerFormulario(){
         setMostrarFormulario(false);
     }
 
+<<<<<<< HEAD
+=======
+    function editNews(news){
+        setMostrarFormulario(true);
+        setNewsEdit(news);
+    }
+
+>>>>>>> 8c532c4 (updates)
     return (
         <div>
             <div className="admin_header">
@@ -31,9 +47,15 @@ const AdminNews = () => {
             </div>
 
             {
+<<<<<<< HEAD
                 mostrarFormulario ? (
                     <AdminNewsRegister removeForm={removerFormulario}/>
                 ) : <></>
+=======
+                mostrarFormulario && (
+                    <AdminNewsRegister removeForm={removerFormulario} news={newsEdit}/>
+                ) 
+>>>>>>> 8c532c4 (updates)
             }
             
             <div className="adminnewscardcontainer">
@@ -45,6 +67,10 @@ const AdminNews = () => {
                         title={news.title}
                         description={news.description}
                         autor={news.autor}
+<<<<<<< HEAD
+=======
+                        onEdit={() => editNews(news)}
+>>>>>>> 8c532c4 (updates)
                         />
                     ))
                 }

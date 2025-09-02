@@ -10,7 +10,11 @@ function Sidebar() {
               <h2 className="sidebar_title">Sport Interior</h2>
           </div>
         
+<<<<<<< HEAD
       </div>
+=======
+        </div>
+>>>>>>> 8c532c4 (updates)
       <Sidebar_navigation/>
       </div>
     );

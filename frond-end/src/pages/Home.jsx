@@ -1,5 +1,6 @@
 import { FaBasketball } from "react-icons/fa6";
 import { IoFootball } from "react-icons/io5";
+<<<<<<< HEAD
 import { FaCheckCircle } from "react-icons/fa";
 import { IoMdExit } from "react-icons/io";
 
@@ -76,3 +77,59 @@ const Home = () =>{
     )
 }
 export default Home
+=======
+import Card_matchesTop from "../components/Card_matchesTop";
+import Card_news from "../components/Card_News";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useAuth } from "../AuthContext";
+import axios from "axios";
+
+const Home = () => {
+  const [news, setNews] = useState([]);
+  const { isLogged, user, logout } = useAuth();
+
+  useEffect(() =>{
+    const fetchNews = async () =>{
+      try {
+        const response = await axios.get('http://localhost:4000/news');
+        setNews(response.data)
+      } catch (error) {
+        console.error(`Erro ao buscar post: ${error}`)
+      }
+    }
+    fetchNews();
+  },[])
+
+  return (
+    <div className="home_page">
+
+        <h1>Ultimas Notícias</h1>
+
+      <div style={{ display: "flex", flexDirection: "row", gap: "15px", justifyContent:'center' }}>
+        <div>
+          {news.map((newsItem) => (
+            <Card_news
+              key={newsItem._id}
+              image={newsItem.image}
+              title={newsItem.title}
+              autor={newsItem.autor}
+              category={newsItem.category}
+              icon={
+                newsItem.category === "Basquete" ? (
+                  <FaBasketball />
+                ) : (
+                  <IoFootball />
+                )
+              }
+              description={newsItem.description}
+              likes={newsItem.like}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Home;
+>>>>>>> 8c532c4 (updates)

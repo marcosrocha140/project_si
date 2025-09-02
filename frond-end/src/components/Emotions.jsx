@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { MdOutlineMessage } from "react-icons/md";
 import { FaShare } from "react-icons/fa";
@@ -9,6 +10,17 @@ const Emotions = ({likes, liked, msgClick}) => {
         {
           liked ? <FcLike onClick={liked}/> : <FcLikePlaceholder onClick={liked}/>
         }
+=======
+import { FcLikePlaceholder } from "react-icons/fc";
+import { MdOutlineMessage } from "react-icons/md";
+import { FaShare } from "react-icons/fa";
+
+const Emotions = ({likes, onLikeClick, msgClick}) => {
+  return (
+    <div className="emotions">
+      <p>
+        <FcLikePlaceholder onClick={onLikeClick}/>
+>>>>>>> 8c532c4 (updates)
         <span>
           {likes} curtidas
         </span>

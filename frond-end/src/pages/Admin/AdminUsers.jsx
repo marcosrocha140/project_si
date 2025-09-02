@@ -1,5 +1,8 @@
 import { useState } from "react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8c532c4 (updates)
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { LiaClipboardListSolid } from "react-icons/lia";
